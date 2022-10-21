@@ -1,6 +1,5 @@
 const APIkey = '713127e45178ba0f5a1e551fd77a5b80';
 
-// $(`#location`).val;
 
 const temp = $('#temp');
 const wind = $('#wind');
@@ -9,7 +8,8 @@ const cityNameTitle = $('#cityTitle')
 
 $('#search').on('click' , () =>{
     let city = $('#location').val();
-    cityNameTitle.text(`${city}`)
+    cityNameTitle.text(`${city}`);    
+    localStorage.setItem('recentSearch', city);
     const reqURL =  "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIkey;
     if(city = null){
         console.log('err');
@@ -27,7 +27,8 @@ $('#search').on('click' , () =>{
                 }
                 render(weatherData)
         })
-        .catch(err => console.error(err));
+        searchedList();
+        // .catch(err => console.error(err));
 })
 
     function render(weatherData){
@@ -37,8 +38,9 @@ $('#search').on('click' , () =>{
         let cityWind = weather.wind;
         let cityHumidity = weather.humidity;
         
-        temp.text(`Temp: ${cityTemp}°C`)
-        wind.text(`Wind: ${cityWind} / Mph`)
-        humidity.text(`Humidity: ${cityHumidity} %`)
+        temp.html(`Temp: ${cityTemp}°C`);
+        wind.text(`Wind: ${cityWind} / Mph`);
+        humidity.text(`Humidity: ${cityHumidity} %`);
+        
+        doubles()
     }
-

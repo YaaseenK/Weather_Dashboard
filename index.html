@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style/card.css">
     <link rel="stylesheet" href="./Assets/style/style.css">
+    <link rel="stylesheet" href="./Assets/style/toggleButton.css">
     <title>Week 05 Travel App</title>
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -22,7 +24,17 @@
 
         <blockquote>
             <div class="divTitle">
-                <p id="cityTitle">Data</p>
+                
+                <div class="unit">
+                    <div class="text">C/F</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            
+                
+                <p id="cityTitle">City</p>
             </div>
                 <div class="pDiv">
                     <h2 id="temp">Temp: </h2>
@@ -31,30 +43,55 @@
                     <h2>UV Index: </h2>
                 </div>            
         </blockquote>
-        <div class="card-Container">
-            <div class="card">
-                <canvas></canvas>
-            </div>
-            <div class="card">
-                <canvas></canvas>
-            </div>
-    
+        <div class="weekLyForcast">
+            <p> Weekly Forcast</p>
         </div>
+        <div class="card-Container container">
+            <div class="card-1">
+                <canvas></canvas>
+            </div>
+        </div>
+        <div class="card-Container-1 container">
+            <div class="card-2">
+                <canvas></canvas>
+            </div>
+        </div>   
+        <div class="card-Container-2 container">
+            <div class="card-3">
+                <canvas></canvas>
+            </div>
+        </div>   
+        <div class="card-Container-3 container">
+            <div class="card-4">
+                <canvas></canvas>
+            </div>
+        </div>
+        <div class="card-Container-4 container">
+            <div class="card-4">
+                <canvas></canvas>
+            </div>
+        </div>
+
         <section>
             <h2>Search For City: </h2>
             <input type="text" id="location" name="location">
             <button id="search" type="submit">Search</button>
-                <p>Austin</p>
-                <p>Chicago</p>
-                <p>New York</p>
-                <p>Orlando</p>
-                <p>San Francisco</p>
-                <p>Seattle</p>
-                <p>Denver</p>
-                <p>Atlanta</p>
+                <div class="searchBar" id="searchBar">
+                    <!-- <p id="search0">Austin</p>
+                    <p id="search1">Chicago</p>
+                    <p id="search2">New York</p>
+                    <p id="search3">Orlando</p>
+                    <p id="search4">San Francisco</p>
+                    <p id="search5">Seattle</p>
+                    <p id="search6">Denver</p>
+                    <p id="search7">Atlanta</p> -->
+                </div>
         </section>
-
+        
+        <footer></footer>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="./Assets/script/reloadFromHistory.js"></script>
+        <script src="./Assets/script/recentSearches.js"></script>
         <script src="./Assets/script/script.js"></script>
     </main>
 
