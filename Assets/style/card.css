@@ -16,9 +16,10 @@
 
 .container{
     box-shadow: 0 0.2rem 1rem 0 #F8DE7E;
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     margin-bottom: 2rem;
+    justify-content: center;
 }
 
 .card-Container{
@@ -54,9 +55,14 @@
     
 }
 
-canvas{
+.canvas{
     background-color: var(--card-blue-bg);
     width: 100%;
     height: 100%;
-    border: 2px solid #19C3FB
+    border: 2px solid #19C3FB;
+    text-align: center;
+    font-size: 2rem;
+    font-family: elevon, sans-serif;
+    font-weight: 700;
+    
 }

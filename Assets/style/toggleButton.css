@@ -1,13 +1,13 @@
 /* The switch - the box around the slider */
 .unit{
-    grid-column: 13 / span 1;
- 
-    
-}
+    display: flex;    
+    justify-content:end;
+    align-items: center;
+  }
 .text{
- 
-    
-}
+    padding: 1rem;
+  }
+
 .switch {
     position: relative;
     display: inline-block;
@@ -48,7 +48,7 @@
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #FFCD00;
   }
   
   input:focus + .slider {
