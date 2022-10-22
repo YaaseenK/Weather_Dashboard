@@ -10,6 +10,7 @@ $('#search').on('click' , () =>{
     let city = $('#location').val();
     cityNameTitle.text(`${city}`);    
     localStorage.setItem('recentSearch', city);
+    futureReq();
     const reqURL =  "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIkey;
     if(city = null){
         console.log('err');
@@ -28,6 +29,7 @@ $('#search').on('click' , () =>{
                 render(weatherData)
         })
         searchedList();
+        
         // .catch(err => console.error(err));
 })
 
@@ -41,6 +43,4 @@ $('#search').on('click' , () =>{
         temp.html(`Temp: ${cityTemp}°C`);
         wind.text(`Wind: ${cityWind} / Mph`);
         humidity.text(`Humidity: ${cityHumidity} %`);
-        
-        doubles()
     }

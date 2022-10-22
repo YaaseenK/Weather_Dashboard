@@ -24,8 +24,3 @@ function searchedList(){
             index ++;
         });
 }
-
-function doubles(){
-
-}
-

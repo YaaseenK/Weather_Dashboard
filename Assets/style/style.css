@@ -35,6 +35,8 @@ main {
 }
 
 header{
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 0.2rem 3rem 0 #F8DE7E;
     background: var(--card-blue-bg);
     grid-column: 4 / span 15;
@@ -45,9 +47,10 @@ header{
     text-align: center;
 } 
 
+
 section {
     grid-column: 4 / span 3;
-    grid-row: 8 / span 10;
+    grid-row: 8 / span 7;
     box-shadow: 0 0.2rem 3rem 0 #F8DE7E;
     padding: 1rem;
     background: var(--card-blue-bg);
@@ -78,8 +81,8 @@ blockquote {
     background: var(--card-blue-bg);
     margin: 0;
     padding: 1rem;
-    grid-column: 8 / span 4;
-    grid-row: 8 / span 8;
+    grid-column: 8 / span 8;
+    grid-row: 8 / span 6;
     margin-bottom: var(--spacing);
 }
 
@@ -109,7 +112,7 @@ button {
 
 footer{
     grid-column: 4 / span 15;
-    grid-row: 20 / span 3;
+    grid-row: 25 / span 3;
 }
 
 @media only screen and (max-width: 1126px) and (max-width: 1120px) {

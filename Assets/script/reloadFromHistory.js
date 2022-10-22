@@ -3,6 +3,7 @@ let pickedItem = $('#searchBar');
 pickedItem.on('click' , e => {
     // searchedBar.pop()
     console.log(e.target)
+    futureReq();
     let reloadSearch = e.target.id
     
     let newSearch =  reloadSearch.split(' ');
