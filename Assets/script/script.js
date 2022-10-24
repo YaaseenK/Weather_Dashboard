@@ -7,8 +7,9 @@ const humidity = $('#humidity');
 const cityNameTitle = $('#cityTitle')
 
 $('#search').on('click' , () =>{
-    let city = $('#location').val();
-    cityNameTitle.text(`${city}`);    
+
+    var city = $('#location').val();
+    cityNameTitle.text(` ${city} Current Weather Conditions`);    
     localStorage.setItem('recentSearch', city);
     futureReq();
     const reqURL =  "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIkey;
@@ -24,14 +25,17 @@ $('#search').on('click' , () =>{
             let weatherData = {
                     temp: data.main.temp,
                     wind: data.wind.speed,
-                    humidity: data.main.humidity
+                    humidity: data.main.humidity,
+                    lat: data.coord.lat,
+                    lon: data.coord.lon
                 }
-                render(weatherData)
+                render(weatherData);
         })
         searchedList();
         
         // .catch(err => console.error(err));
 })
+
 
     function render(weatherData){
         
@@ -39,6 +43,7 @@ $('#search').on('click' , () =>{
         let cityTemp = Math.round(weather.temp - 273.15);
         let cityWind = weather.wind;
         let cityHumidity = weather.humidity;
+        
         
         temp.html(`Temp: ${cityTemp}°C`);
         wind.text(`Wind: ${cityWind} / Mph`);

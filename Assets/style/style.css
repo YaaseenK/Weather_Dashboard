@@ -112,7 +112,7 @@ button {
 
 footer{
     grid-column: 4 / span 15;
-    grid-row: 25 / span 3;
+    grid-row: 20 / span 3;
 }
 
 @media only screen and (max-width: 1126px) and (max-width: 1120px) {
